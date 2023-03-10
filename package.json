@@ -1,0 +1,23 @@
+{
+  "name": "getkcal",
+  "version": "1.0.0",
+  "description": "Estes são os arquivos iniciais do projeto **getkcal** \r ## Instalação",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maateusilva/getkcal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maateusilva/getkcal/issues"
+  },
+  "homepage": "https://github.com/maateusilva/getkcal#readme",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
