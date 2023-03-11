@@ -16,6 +16,50 @@ body {
   color: white;
 }
 
+.error{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* top: 14px; */
+  top: -100%;
+  transition: all 1s ease-in-out;
+}
+
+.error_wrapper{
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid red;
+  padding: 12px;
+  background-color: rgba(255, 0, 0, 0.308);
+}
+
+.get-result-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* top: 14px; */
+  top: -100%;
+  transition: all 1s ease-in-out;
+
+}
+
+.get-result-container_wrapper{
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid green;
+  padding: 12px;
+  background-color: rgba(0, 128, 0, 0.24);
+}
+
+.get-result-container_wrapper--content, .error_wrapper-content{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .container {
   width: 550px;
   margin: 0 auto;

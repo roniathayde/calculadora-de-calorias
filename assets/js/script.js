@@ -5,6 +5,9 @@ form.addEventListener('submit', handleSubmit)
 function handleSubmit(event){
     event.preventDefault(); 
 
+    verifyFields ();
+    getResult();
+
     
     const gender = getSelectedValue('gender')
 
@@ -60,6 +63,17 @@ function handleSubmit(event){
     result.innerHTML = layout;
 }
 
+function getResult(){
+  
+  let container = document.getElementById('get-result-container');
+
+  container.style.top = "14px";
+
+  setTimeout(()=>{
+    container.style.top = "-100%";
+  }, 3000)
+
+}
 
 function getSelectedValue(id) {
     const select = document.getElementById(id);
@@ -70,4 +84,37 @@ function getSelectedValue(id) {
 
 function getInputNumberValue(id){
     return Number(document.getElementById(id).value)
+}
+
+function verifyFields () {
+  let fields = document.querySelectorAll('.form-group input')
+
+  fields.forEach( (element)=>{
+
+    if ( element.value == "" ) {
+
+
+      
+      element.previousElementSibling.textContent
+      
+      let container = document.getElementById('error-content')      
+
+      document.querySelector('.error_wrapper-content').textContent = ""
+
+      document.querySelector('.error_wrapper-content').innerHTML += `
+      Preencha todos os campos.  <br>    
+      O campo: ${element.previousElementSibling.textContent} precisa de atenção`
+
+      container.style.top = "14px"
+      
+      setTimeout(()=>{
+        container.style.top = "-100%";
+      }, 3000)
+      
+      throw new Error('Houve um erro no formulário')
+    }
+    
+
+  });
+
 }
